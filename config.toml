@@ -1,0 +1,10 @@
+base_url = "https://footnote.wiki"
+title = "Footnote - Local-first wiki for friends and family"
+description = "A local-first, zero-cloud, peer sync wiki for friends and family"
+
+compile_sass = false
+build_search_index = false
+
+[extra]
+personal_site = "https://www.natehardt.dev"
+github_url = "https://github.com/nhardt/footnote.wik"

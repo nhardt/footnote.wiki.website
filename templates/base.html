@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['IBM Plex Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-zinc-900 text-zinc-100 font-sans">
+
+    <nav class="border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-xl font-mono font-semibold hover:text-zinc-300 transition">footnote.wiki</a>
+            <div class="flex gap-8 text-sm">
+                <a href="/#how-it-works" class="text-zinc-400 hover:text-zinc-100 transition">How It Works</a>
+                <a href="/links" class="text-zinc-400 hover:text-zinc-100 transition">Links</a>
+                <a href="/privacy" class="text-zinc-400 hover:text-zinc-100 transition">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="border-t border-zinc-800">
+        <div class="max-w-4xl mx-auto px-6 py-8 flex justify-between items-center text-sm text-zinc-500">
+            <div>© 2026 Footnote</div>
+            <div class="flex gap-6">
+                <a href="/links" class="hover:text-zinc-300 transition">Links</a>
+                <a href="/privacy" class="hover:text-zinc-300 transition">Privacy</a>
+                <a href="{{ config.extra.personal_site }}" class="hover:text-zinc-300 transition">About me</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
