@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
     </nav>
 
     <main>
-        {% block content %}{% endblock content %}
+        {{ block "main" . }}{{ end }}
     </main>
 
     <footer class="border-t border-zinc-800">
@@ -47,7 +47,7 @@
             <div class="flex gap-6">
                 <a href="/links" class="hover:text-zinc-300 transition">Links</a>
                 <a href="/privacy" class="hover:text-zinc-300 transition">Privacy</a>
-                <a href="{{ config.extra.personal_site }}" class="hover:text-zinc-300 transition">About me</a>
+                <a href="{{ .Site.Params.personal_site }}" class="hover:text-zinc-300 transition">About me</a>
             </div>
         </div>
     </footer>
