@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article class="max-w-3xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-semibold mb-8">{{ .Title }}</h1>
+    <div class="prose prose-invert prose-zinc max-w-none">
+        {{ .Content }}
+    </div>
+</article>
+
+<style>
+.prose {
+    color: #d4d4d8;
+}
+.prose h2 {
+    color: #fafafa;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.prose p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+.prose strong {
+    color: #fafafa;
+    font-weight: 600;
+}
+.prose a {
+    color: #a1a1aa;
+    text-decoration: underline;
+}
+.prose a:hover {
+    color: #fafafa;
+}
+</style>
+{{ end }}
