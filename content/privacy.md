@@ -24,7 +24,7 @@ Nothing. There are no Footnote servers. There is no cloud storage. There is no d
 
 ## Your Data
 
-You own your data. It's stored locally on your devices in plain markdown files. You can export, backup, or delete your vault at any time by managing the files on your device.
+You own your data. It's stored locally on your devices in plain text file. You can export, backup, or delete your vault at any time by managing the files on your device.
 
 ## Changes to This Policy
 

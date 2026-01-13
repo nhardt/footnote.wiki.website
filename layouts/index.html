@@ -1,8 +1,110 @@
 {{ define "main" }}
-<div class="max-w-4xl mx-auto px-6 py-24">
-    <h1 class="text-4xl font-semibold mb-4">{{ .Title }}</h1>
-    <div class="text-zinc-400">
-        {{ .Content }}
+<section class="max-w-4xl mx-auto px-6 pt-24">
+    <h1 class="text-5xl font-semibold mb-6 leading-tight">
+        A local-first, zero-cloud, peer sync wiki for friends and family
+    </h1>
+    <p class="text-xl text-zinc-400 max-w-2xl">
+        Footnote keeps your notes on your devices and syncs directly with people
+        you trust. No cloud, no vendor lock-in.
+    </p>
+</section>
+
+<section id="how-it-works" class="max-w-4xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-semibold mb-16 text-center">How It Works</h2>
+
+    <div class="space-y-16">
+        <div>
+            <span class="text-sm font-mono text-zinc-500">01</span>
+            <h3 class="text-2xl font-semibold mt-2 mb-3">
+                Your Notes Stay Yours
+            </h3>
+            <p class="text-zinc-400 text-lg max-w-2xl">
+                Write in markdown. Link between notes with simple bracket
+                syntax. Your notes are just files on your device.
+            </p>
+        </div>
+
+        <div>
+            <span class="text-sm font-mono text-zinc-500">02</span>
+            <h3 class="text-2xl font-semibold mt-2 mb-3">
+                Sync Without Servers
+            </h3>
+            <p class="text-zinc-400 text-lg max-w-2xl">
+                Your devices connect directly to each other.
+            </p>
+        </div>
+
+        <div>
+            <span class="text-sm font-mono text-zinc-500">03</span>
+            <h3 class="text-2xl font-semibold mt-2 mb-3">Share With Trust</h3>
+            <p class="text-zinc-400 text-lg max-w-2xl">
+                Choose exactly who sees what. Export your contact info, import
+                theirs, tag notes to share. Direct peer-to-peer, not public
+                posting.
+            </p>
+        </div>
     </div>
-</div>
+</section>
+
+<section class="max-w-4xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-semibold mb-12 text-center">Use Cases</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="border border-zinc-800 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-2">Family Wiki</h3>
+            <p class="text-zinc-400 text-sm">
+                Share recipes, stories, and memories. Keep family knowledge in
+                one place.
+            </p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-2">Research Network</h3>
+            <p class="text-zinc-400 text-sm">
+                Build a Zettelkasten with colleagues. Track what you're reading
+                and learning.
+            </p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6">
+            <h3 class="text-lg font-semibold mb-2">Personal Knowledge Base</h3>
+            <p class="text-zinc-400 text-sm">
+                Your notes, synced across devices. No cloud required.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-4xl mx-auto px-6 py-24 border-t border-zinc-800">
+    <div class="text-center">
+        <h2 class="text-3xl font-semibold mb-6">Get Started</h2>
+        <p class="text-zinc-400 mb-8">
+            Footnote is pre-alpha software. Download from GitHub and try it out.
+        </p>
+        <div class="text-zinc-400 text-sm">
+            <p>
+                Pre-alpha available on
+                <a
+                    href="{{ .Site.Params.github_url }}"
+                    class="text-zinc-100 hover:text-zinc-300 transition underline"
+                    >GitHub</a
+                >
+            </p>
+            <p class="mt-2">
+                Coming soon to Microsoft Store, Google Play, and App Store
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-zinc-950 border-t border-zinc-800">
+    <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+        <p class="text-zinc-400 mb-4">
+            Have feedback or want to request a feature?
+        </p>
+        <a
+            href="https://github.com/nhardt/footnote/issues/new/choose"
+            class="text-zinc-100 hover:text-zinc-300 transition"
+        >
+            Drop a note in the guestbook →
+        </a>
+    </div>
+</section>
 {{ end }}
